@@ -41,7 +41,7 @@ const Classes = () => {
 
     axiosSecure.get(`/cart-item/${id}?email=${currentUser?.email}`)
     .then(res => {
-      
+
       if(res.data.classId === id) {
 
         return alert("Already selected")
