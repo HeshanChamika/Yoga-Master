@@ -16,7 +16,6 @@ const Classes = () => {
   const [hoveredCard, setHoveredCard] = useState([null]);
   const axiosFetch = useAxiosFetch();
   const axiosSecure = useAxiosSecure();
-
   const handleHover = (index) => {
     setHoveredCard(index);
   };
@@ -26,19 +25,13 @@ const Classes = () => {
       .catch((err) => console.log(err));
   }, []);
 
-
   const handleSelect = (id) => {
-    // console.log(id)
-    axiosSecure
-      .get(`/enrolled-classes/${currentUser?.email}`)
+    axiosSecure.get(`/enrolled-classes/${currentUser?.email}`)
       .then(res => setEnrolledClasses(res.data))
       .catch((err) => console.log(err));
-
     if(!currentUser) {
-      alert("Please login first")
-      return navigate("/login")
+      return alert("Please login first")
     }
-
     axiosSecure.get(`/cart-item/${id}?email=${currentUser?.email}`)
     .then(res => {
 
