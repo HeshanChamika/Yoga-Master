@@ -8,6 +8,7 @@ import Register from "../pages/user/Register";
 import SingleClass from "../pages/Classes/SingleClass";
 import DashboardLayout from "../layout/DashboardLayout";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import StudentCP from "../pages/Dashboard/Student/StudentCP";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,12 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard />,
+      },
+
+      // student routes
+      {
+        path: "student-cp",
+        element: <StudentCP/>
       }
     ]
   }

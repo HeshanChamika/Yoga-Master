@@ -13,6 +13,7 @@ import { IoMdDoneAll } from'react-icons/io';
 import {SiGoogleclassroom, SiInstructure } from 'react-icons/si';
 import Swal from'sweetalert2';
 import Scroll from '../hooks/useScroll';
+import HashLoader from "react-spinners/HashLoader"
 
 const adminNavItems = [
    {to: "/dashboard/admin-home", icon: <BiHomeAlt className='text-2xl' />, label: "Dashboard Home"},
@@ -81,8 +82,10 @@ const DashboardLayout = () => {
 
    // const role = "user";
 
-   if(loader){
-      return <div>Loading...</div>
+   if(loader) {
+      return <div className='flex justify-center items-center h-screen'>
+         <HashLoader color="#ff1949" size={50} />
+      </div>
    }
 
   return (
