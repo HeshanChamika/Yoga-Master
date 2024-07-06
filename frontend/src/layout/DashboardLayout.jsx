@@ -12,6 +12,7 @@ import { IoSchoolSharp } from'react-icons/io5';
 import { IoMdDoneAll } from'react-icons/io';
 import {SiGoogleclassroom, SiInstructure } from 'react-icons/si';
 import Swal from'sweetalert2';
+import Scroll from '../hooks/useScroll';
 
 const adminNavItems = [
    {to: "/dashboard/admin-home", icon: <BiHomeAlt className='text-2xl' />, label: "Dashboard Home"},
@@ -172,6 +173,7 @@ const DashboardLayout = () => {
       </div>
 
       <div>
+         <Scroll/>
          <Outlet/>
       </div>
     </div>
