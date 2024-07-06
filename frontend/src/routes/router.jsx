@@ -6,6 +6,8 @@ import Classes from "../pages/Classes/Classes";
 import Login from "../pages/user/Login";
 import Register from "../pages/user/Register";
 import SingleClass from "../pages/Classes/SingleClass";
+import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -38,5 +40,17 @@ export const router = createBrowserRouter([
         loader: ({params}) => fetch(`http://localhost:3000/class/${params.id}`)
       }
     ]
+  },
+
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      }
+    ]
   }
+
 ]);
