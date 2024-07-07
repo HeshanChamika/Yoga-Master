@@ -15,6 +15,8 @@ import MyPaymentHistory from "../pages/Dashboard/Student/Payment/History/MyPayme
 import AsInstructor from "../pages/Dashboard/Student/Apply/AsInstructor";
 import Payment from "../pages/Dashboard/Student/Payment/Payment";
 import CourseDetails from "../pages/Dashboard/Student/Enroll/CourseDetails";
+import InstructorCP from "../pages/Dashboard/Instructor/InstructorCP";
+import AddClass from "../pages/Dashboard/Instructor/AddClass";
 
 export const router = createBrowserRouter([
   {
@@ -86,6 +88,16 @@ export const router = createBrowserRouter([
       {
         path: "course-details",
         element: <CourseDetails/>
+      },
+
+      // instructor routes
+      {
+        path: "instructor-cp",
+        element: <InstructorCP />
+      },
+      {
+        path: "add-class",
+        element: <AddClass/>
       }
     ]
   }
