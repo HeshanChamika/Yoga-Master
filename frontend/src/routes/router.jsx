@@ -14,6 +14,7 @@ import SelectedClass from "../pages/Dashboard/Student/SelectedClass";
 import MyPaymentHistory from "../pages/Dashboard/Student/Payment/History/MyPaymentHistory";
 import AsInstructor from "../pages/Dashboard/Student/Apply/AsInstructor";
 import Payment from "../pages/Dashboard/Student/Payment/Payment";
+import CourseDetails from "../pages/Dashboard/Student/Enroll/CourseDetails";
 
 export const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
       {
         path: "user/payment",
         element: <Payment/>
+      },
+      {
+        path: "course-details",
+        element: <CourseDetails/>
       }
     ]
   }
