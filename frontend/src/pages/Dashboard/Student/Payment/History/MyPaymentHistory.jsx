@@ -71,7 +71,7 @@ const MyPaymentHistory = () => {
 
          <div>
             <div>
-            <table className="w-full">
+            <table className="w-full mt-6">
                <thead>
                   <tr>
                      <th className="text-left font-semibold">#</th>
