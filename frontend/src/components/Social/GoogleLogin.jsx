@@ -1,7 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
-import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import useAuth from "../../hooks/useAuth";
 
 const GoogleLogin = () => {
    const {googleLogin} = useAuth();

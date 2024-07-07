@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { MdOutlineAlternateEmail, MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import GoogleLogin from '../../components/Social/GoogleLogin';
 import useAuth from '../../hooks/useAuth';
+import GoogleLogin from '../../components/Social/GoogleLogin';
 
 const Login = () => {
    const [showPassword, setShowPassword] = useState(false);
