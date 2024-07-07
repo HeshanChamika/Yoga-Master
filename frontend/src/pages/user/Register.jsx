@@ -168,9 +168,9 @@ import { useForm } from "react-hook-form"
 import { AiOutlineLock, AiOutlineMail, AiOutlinePhone, AiOutlinePicture, AiOutlineUser } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { Link, useNavigate } from 'react-router-dom'
-import GoogleLogin from '../../components/headers/Social/GoogleLogin';
 import { AuthContext } from '../../utilities/providers/AuthProvider';
 import axios from 'axios';
+import GoogleLogin from '../../components/Social/GoogleLogin';
 
 const Register = () => {
 
