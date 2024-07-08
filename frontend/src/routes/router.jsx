@@ -18,6 +18,10 @@ import CourseDetails from "../pages/Dashboard/Student/Enroll/CourseDetails";
 import InstructorCP from "../pages/Dashboard/Instructor/InstructorCP";
 import AddClass from "../pages/Dashboard/Instructor/AddClass";
 import MyClasses from "../pages/Dashboard/Instructor/MyClasses";
+import PendingCourses from "../pages/Dashboard/Instructor/PendingCourses";
+import ApprovedCourses from "../pages/Dashboard/Instructor/ApprovedCourses";
+import AdminHome from "../pages/Dashboard/Admin/AdminHome";
+import ManageClasses from "../pages/Dashboard/Admin/ManageClasses";
 
 export const router = createBrowserRouter([
   {
@@ -103,6 +107,24 @@ export const router = createBrowserRouter([
       {
         path: "my-classes",
         element: <MyClasses/>
+      },
+      {
+        path: "my-pending",
+        element: <PendingCourses/>
+      },
+      {
+        path: "my-approved",
+        element: <ApprovedCourses/>
+      },
+
+      // admin routes
+      {
+        path: "admin-home",
+        element: <AdminHome/>
+      },
+      {
+        path: "manage-classes",
+        element: <ManageClasses/>
       }
     ]
   }
