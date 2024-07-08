@@ -23,18 +23,18 @@ const UpdateUser = () => {
    
   return (
     <div>
-      <h1 className='text-center text-4xl font-bold mt-5'>Update : <span className='text-secondary'>{userCredentials?.name}</span></h1>
-      <p className='text-center'>Change details about <span className='text-red-400 font-bold'>{userCredentials?.name}</span></p>
+      <h1 className='mt-5 text-4xl font-bold text-center'>Update : <span className='text-secondary'>{userCredentials?.name}</span></h1>
+      <p className='text-center'>Change details about <span className='font-bold text-red-400'>{userCredentials?.name}</span></p>
       {/* Form area starts here */}
       <section className=''>
-         <div className='mx-auto px-4 py-16 sm:px-6 lg:px-8'>
-            <div className='rounded-lg bg-white p-8 shadow-lg lg:p-12'>
+         <div className='px-4 py-16 mx-auto sm:px-6 lg:px-8'>
+            <div className='p-8 bg-white rounded-lg shadow-lg lg:p-12'>
                <form className='space-y-4' onSubmit={handleFormSubmit}>
                   <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
                      <div>
-                        <label className='ml-2 pb-4' htmlFor="name">Name</label>
+                        <label className='pb-4 ml-2' htmlFor="name">Name</label>
                         <input
-                           className='w-full rounded-lg mt-3 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-3 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Your Name'
                            type="text"
                            required
@@ -46,7 +46,7 @@ const UpdateUser = () => {
                      <div>
                         <label className='ml-2' htmlFor="phone">Phone</label>
                         <input
-                           className='w-full rounded-lg mt-3 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-3 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Phone Number'
                            type="tel"
                            required
@@ -61,7 +61,7 @@ const UpdateUser = () => {
                         <label className='ml-2' htmlFor="email">Email</label>
                         <p className='text-[12px] ml-2 text-red-400'>Update email is not recommend. Please leave it default</p>
                         <input
-                           className='w-full rounded-lg mt-2 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-2 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Email Address'
                            type="email"
                            required
@@ -74,7 +74,7 @@ const UpdateUser = () => {
                         <label className='ml-2' htmlFor="skills">Skills</label>
                         <p className='text-[12px] ml-2 text-red-400'>If the user is an instructor, then set skills; otherwise, leave it</p>
                         <input
-                           className='w-full rounded-lg mt-2 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-2 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Skills'
                            type="text"
                            defaultValue={userCredentials?.skills ? userCredentials?.skills : ''}
@@ -87,7 +87,7 @@ const UpdateUser = () => {
                      <div>
                      <label className='ml-2' htmlFor="address">Address</label>
                         <input
-                           className='w-full rounded-lg mt-2 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-2 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Address'
                            type="text"
                            defaultValue={userCredentials?.address}
@@ -98,7 +98,7 @@ const UpdateUser = () => {
                      <div>
                         <label className='ml-2' htmlFor="photoUrl">Photo URL</label>
                         <input
-                           className='w-full rounded-lg mt-2 border outline-none border-secondary p-3 text-sm'
+                           className='w-full p-3 mt-2 text-sm border rounded-lg outline-none border-secondary'
                            placeholder='Photo URL'
                            type="text"
                            defaultValue={userCredentials?.photoUrl}
@@ -111,7 +111,7 @@ const UpdateUser = () => {
                   <div className='grid grid-cols-1 gap-4 text-center sm:grid-cols-3'>
                      <div>
                         <input
-                           className='peer sr-only'
+                           className='sr-only peer'
                            id='option1'
                            type="radio"
                            value='user'
@@ -119,11 +119,11 @@ const UpdateUser = () => {
                            tabIndex="-1"
                            name='option'
                         />
-                        <label htmlFor="option1" className='block w-full rounded-lg border border-secondary p-3 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>User</span></label>
+                        <label htmlFor="option1" className='block w-full p-3 border rounded-lg border-secondary peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>User</span></label>
                      </div>
                      <div>
                      <input
-                           className='peer sr-only'
+                           className='sr-only peer'
                            id='option2'
                            type="radio"
                            value='admin'
@@ -131,11 +131,11 @@ const UpdateUser = () => {
                            tabIndex="-1"
                            name='option'
                         />
-                        <label htmlFor="option2" className='block w-full rounded-lg border border-secondary p-3 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>Admin</span></label>
+                        <label htmlFor="option2" className='block w-full p-3 border rounded-lg border-secondary peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>Admin</span></label>
                      </div>
                      <div>
                      <input
-                           className='peer sr-only'
+                           className='sr-only peer'
                            id='option3'
                            type="radio"
                            value='instructor'
@@ -143,16 +143,16 @@ const UpdateUser = () => {
                            tabIndex="-1"
                            name='option'
                         />
-                        <label htmlFor="option3" className='block w-full rounded-lg border border-secondary p-3 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>Instructor</span></label>
+                        <label htmlFor="option3" className='block w-full p-3 border rounded-lg border-secondary peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white' tabIndex="0"><span className='text-sm font-medium'>Instructor</span></label>
                      </div>
                   </div>
                   <div>
                      <label className='sr-only' htmlFor="message">About</label>
-                     <textarea className='w-full resize-none rounded-lg border-secondary border outline-none p-3 text-sm' placeholder='About user' name="" id=""></textarea>
+                     <textarea className='w-full p-3 text-sm border rounded-lg outline-none resize-none border-secondary' placeholder='About user' name="" id=""></textarea>
                   </div>
 
-                  <div className='bg-secondary rounded-lg text-white text-center w-1/3 h-10'>
-                     <button type='submit'>Update User</button>
+                  <div className='flex justify-center'>
+                  <button className='px-10 py-5 text-white rounded-lg bg-secondary hover:bg-red-500 hover:shadow-lg hover:outline-black' type='submit'>Update User</button>
                   </div>
                </form>
             </div>
